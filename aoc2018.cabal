@@ -58,7 +58,7 @@ common common-options
 library
   import:              common-options
   hs-source-dirs:      src
-  ghc-options:         -Wno-unused-packages -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
+  ghc-options:         -Wno-type-defaults -Wno-unused-top-binds -Wno-unused-packages -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
   build-depends:       split
                      , containers
                      , vector
@@ -67,6 +67,7 @@ library
                      , transformers
   exposed-modules:     Lib
                      , Day01
+                     , Day02
 
 executable aoc2018
   import:              common-options

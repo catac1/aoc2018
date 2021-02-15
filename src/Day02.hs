@@ -12,8 +12,8 @@ import Data.Map (Map)
 countExactLetter :: String -> Map Char Int
 countExactLetter s0 = go s0 M.empty
   where
-    go []     m  = m
-    go (c:cs) m  = go cs (M.alter alterf c m)
+    go []     m = m
+    go (c:cs) m = go cs (M.alter alterf c m)
 
     alterf :: Maybe Int -> Maybe Int
     alterf mi = case mi of
@@ -23,7 +23,7 @@ countExactLetter s0 = go s0 M.empty
 
 toValidCount :: Map Char Int -> (Int, Int)
 toValidCount m =
-  let nTwo = M.size $ M.filter (== 2) m
+  let nTwo   = M.size $ M.filter (== 2) m
       nThree = M.size $ M.filter (== 3) m
   in  (toCount nTwo, toCount nThree)
   where

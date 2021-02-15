@@ -1,5 +1,6 @@
 module Lib
   ( module Control.Monad
+  , module Control.Monad.ST
   , module Control.Exception
   , module Control.Applicative
   , module Data.List
@@ -21,6 +22,7 @@ module Lib
 
 
 import Control.Monad
+import Control.Monad.ST
 import Control.Exception
 import Control.Applicative
 import Data.List

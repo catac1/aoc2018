@@ -1,5 +1,6 @@
 module Lib
   ( module Control.Monad
+  , module Control.Exception
   , module Control.Applicative
   , module Data.List
   , module Data.List.Split
@@ -20,6 +21,7 @@ module Lib
 
 
 import Control.Monad
+import Control.Exception
 import Control.Applicative
 import Data.List
 import Data.List.Split

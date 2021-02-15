@@ -57,11 +57,12 @@ common common-options
                        FlexibleInstances
                        MultiParamTypeClasses
                        DerivingStrategies
+                       ImportQualifiedPost
 
 library
   import:              common-options
   hs-source-dirs:      src
-  ghc-options:         -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
+  ghc-options:         -Wno-unused-packages -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
   build-depends:       split
                      , containers
                      , vector

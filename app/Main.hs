@@ -1,7 +1,7 @@
 module Main (main) where
 
-import Aoc2018 (projectName)
+import Day01
 
 
 main :: IO ()
-main = putStrLn ("Executable for " ++ projectName)
+main = mempty

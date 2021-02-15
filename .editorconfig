@@ -1,0 +1,11 @@
+root = true
+
+[*.hs]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[*.cabal]
+charset = utf-8
+indent_style = space
+indent_size = 2

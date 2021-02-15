@@ -61,7 +61,15 @@ common common-options
 library
   import:              common-options
   hs-source-dirs:      src
-  exposed-modules:     Aoc2018
+  ghc-options:         -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
+  build-depends:       split
+                     , containers
+                     , vector
+                     , directory
+                     , filepath
+                     , transformers
+  exposed-modules:     Lib
+                     , Day01
 
 executable aoc2018
   import:              common-options

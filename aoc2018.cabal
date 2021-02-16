@@ -63,6 +63,7 @@ library
                      , containers
                      , vector
                      , directory
+                     , discrimination
                      , extra
                      , filepath
                      , transformers
@@ -72,6 +73,7 @@ library
                      , Day02
                      , Day03
                      , Day04
+                     , Day05
 
 executable aoc2018
   import:              common-options

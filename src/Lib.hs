@@ -12,6 +12,7 @@ module Lib
   , module Text.Printf
   , module Debug.Trace
   , module Data.Time
+  , module Data.Discrimination
   , readLines
   , readBlocks
   , interactF
@@ -27,9 +28,10 @@ import Control.Monad
 import Control.Monad.ST
 import Control.Exception
 import Control.Applicative
-import Data.List
+import Data.List hiding (nub, group, sort)
 import Data.List.Split (splitWhen)
-import Data.List.Extra
+import Data.List.Extra hiding (group, nub, sort)
+import Data.Discrimination
 import Data.Char
 import Data.Maybe
 import Data.Foldable

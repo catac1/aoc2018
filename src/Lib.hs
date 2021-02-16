@@ -5,11 +5,13 @@ module Lib
   , module Control.Applicative
   , module Data.List
   , module Data.List.Split
+  , module Data.List.Extra
   , module Data.Char
   , module Data.Foldable
   , module Data.Maybe
   , module Text.Printf
   , module Debug.Trace
+  , module Data.Time
   , readLines
   , readBlocks
   , interactF
@@ -26,7 +28,8 @@ import Control.Monad.ST
 import Control.Exception
 import Control.Applicative
 import Data.List
-import Data.List.Split
+import Data.List.Split (splitWhen)
+import Data.List.Extra
 import Data.Char
 import Data.Maybe
 import Data.Foldable
@@ -35,6 +38,7 @@ import Control.Exception
 import System.FilePath
 import Text.Printf
 import Debug.Trace
+import Data.Time
 
 
 readLines :: Handle -> IO [String]

@@ -7,6 +7,7 @@ module Lib
   , module Data.List.Split
   , module Data.List.Extra
   , module Data.Char
+  , module Data.Ratio
   , module Data.Foldable
   , module Data.Maybe
   , module Text.Printf
@@ -21,6 +22,8 @@ module Lib
   , interactSS
   , extractJust
   , branch
+  , minimumsOn
+  , maximumsOn
   ) where
 
 
@@ -33,6 +36,7 @@ import Data.List.Split (splitWhen)
 import Data.List.Extra hiding (group, nub, sort)
 import Data.Discrimination
 import Data.Char
+import Data.Ratio
 import Data.Maybe
 import Data.Foldable
 import System.IO
@@ -85,3 +89,24 @@ branch :: a -> a -> Bool -> a
 branch e1 _  True  = e1
 branch _  e2 False = e2
 
+
+minimumsOn :: Ord b => (a -> b) -> [a] -> [a]
+minimumsOn f xs0 = mumsOn minimumOn f xs0
+
+
+maximumsOn :: Ord b => (a -> b) -> [a] -> [a]
+maximumsOn f xs0 = mumsOn maximumOn f xs0
+
+
+mumsOn
+  :: Ord b
+  => ((a -> b) -> [a] -> a)
+  -> (a -> b)
+  -> [a] -> [a]
+mumsOn mumOn f xs0 =
+  let mumV = mumOn f xs0
+  in  go (f mumV) xs0
+  where
+    go _    []     = []
+    go mumV (x:xs) =
+      if f x == mumV then x : go mumV xs else go mumV xs

@@ -7,6 +7,7 @@ module Lib
   , module Data.List.Split
   , module Data.List.Extra
   , module Data.Char
+  , module Data.Tuple
   , module Data.Ratio
   , module Data.Foldable
   , module Data.Maybe
@@ -24,6 +25,7 @@ module Lib
   , branch
   , minimumsOn
   , maximumsOn
+  , safeTail
   ) where
 
 
@@ -36,6 +38,7 @@ import Data.List.Split (splitWhen)
 import Data.List.Extra hiding (group, nub, sort)
 import Data.Discrimination
 import Data.Char
+import Data.Tuple
 import Data.Ratio
 import Data.Maybe
 import Data.Foldable
@@ -110,3 +113,7 @@ mumsOn mumOn f xs0 =
     go _    []     = []
     go mumV (x:xs) =
       if f x == mumV then x : go mumV xs else go mumV xs
+
+safeTail :: [a] -> [a]
+safeTail []     = []
+safeTail (x:xs) = xs

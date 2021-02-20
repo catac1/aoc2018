@@ -76,6 +76,7 @@ library
                      , Day05
                      , Day06
                      , Day07
+                     , Day08
 
 executable aoc2018
   import:              common-options

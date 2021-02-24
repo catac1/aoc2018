@@ -66,6 +66,7 @@ library
                      , discrimination
                      , extra
                      , filepath
+                     , parallel
                      , transformers
                      , time
   exposed-modules:     Lib
@@ -79,6 +80,7 @@ library
                      , Day08
                      , Day09
                      , Day10
+                     , Day11
 
 executable aoc2018
   import:              common-options

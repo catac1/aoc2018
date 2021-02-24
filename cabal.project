@@ -2,4 +2,6 @@ packages: .
 
 documentation: false
 
+optimization: 2
+
 allow-newer: all

@@ -26,6 +26,9 @@ module Lib
   , minimumsOn
   , maximumsOn
   , safeTail
+  , tfst
+  , tsnd
+  , ttrd
   ) where
 
 
@@ -33,10 +36,10 @@ import Control.Monad
 import Control.Monad.ST
 import Control.Exception
 import Control.Applicative
-import Data.List hiding (nub, group, sort)
+import Data.List hiding (nub, group)
 import Data.List.Split (splitWhen)
 import Data.List.Extra hiding (group, nub, sort)
-import Data.Discrimination
+import Data.Discrimination hiding (sort)
 import Data.Char
 import Data.Tuple
 import Data.Ratio
@@ -117,3 +120,12 @@ mumsOn mumOn f xs0 =
 safeTail :: [a] -> [a]
 safeTail []     = []
 safeTail (x:xs) = xs
+
+tfst :: (a, b, c) -> a
+tfst (a, b, c) = a
+
+tsnd :: (a, b, c) -> b
+tsnd (a, b, c) = b
+
+ttrd :: (a, b, c) -> c
+ttrd (a, b, c) = c

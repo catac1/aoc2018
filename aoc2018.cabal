@@ -54,6 +54,8 @@ common common-options
                        MultiParamTypeClasses
                        DerivingStrategies
                        ImportQualifiedPost
+                       MultiWayIf
+                       DerivingVia
 
 library
   import:              common-options
@@ -82,6 +84,7 @@ library
                      , Day10
                      , Day11
                      , Day12
+                     , Day13
 
 executable aoc2018
   import:              common-options

@@ -38,8 +38,8 @@ import Control.Exception
 import Control.Applicative
 import Data.List hiding (nub, group)
 import Data.List.Split (splitWhen)
-import Data.List.Extra hiding (group, nub, sort)
-import Data.Discrimination hiding (sort)
+import Data.List.Extra hiding (nub, sort)
+import Data.Discrimination hiding (sort, group)
 import Data.Char
 import Data.Tuple
 import Data.Ratio

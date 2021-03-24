@@ -56,6 +56,8 @@ common common-options
                        ImportQualifiedPost
                        MultiWayIf
                        DerivingVia
+                       TypeFamilies
+                       FunctionalDependencies
 
 library
   import:              common-options
@@ -87,6 +89,7 @@ library
                      , Day13
                      , Day14
                      , Day15
+                     , Day16
 
 executable aoc2018
   import:              common-options

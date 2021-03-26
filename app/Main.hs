@@ -6,7 +6,8 @@ module Main (main) where
 -- import Day11 qualified as D11
 -- import Day14 qualified as D14
 -- import Day15 qualified as D15
-import Day16 qualified as D16
+-- import Day16 qualified as D16
+import Day17 qualified as D17
 
 
 main :: IO ()
@@ -21,4 +22,5 @@ main = do
   -- D14.part2
   -- D15.part1
   -- D15.part2
-  D16.part2
+  -- D16.part2
+  D17.part1

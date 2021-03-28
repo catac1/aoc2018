@@ -65,7 +65,10 @@ library
   ghc-options:         -Wno-unused-matches -Wno-unused-imports -Wno-unused-local-binds -Wno-name-shadowing -Wno-incomplete-uni-patterns -Wno-type-defaults -Wno-unused-top-binds -Wno-unused-packages -Wno-unused-imports -Wno-missing-export-lists -Wno-compat-unqualified-imports
   build-depends:       split
                      , array
+                     , adjunctions
                      , containers
+                     , comonad
+                     , distributive
                      , vector
                      , directory
                      , discrimination
@@ -92,6 +95,7 @@ library
                      , Day15
                      , Day16
                      , Day17
+                     , Day18
 
 executable aoc2018
   import:              common-options
